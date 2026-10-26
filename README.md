@@ -27,7 +27,7 @@ Pick a skill from the table above, then swap `<skill-name>` below for its folder
 
 ```bash
 mkdir -p .claude/skills
-git clone https://github.com/elayadesign/ai-design-skills.git /tmp/ai-design-skills
+git clone https://github.com/jamesrwatsonx-creator/ai-design-skills-codex.git /tmp/ai-design-skills
 cp -r /tmp/ai-design-skills/skills/<skill-name> .claude/skills/
 ```
 
@@ -40,7 +40,7 @@ Then just ask, in plain language, for what that skill covers.
 ```bash
 mkdir -p .cursor/rules
 curl -o .cursor/rules/<skill-name>.md \
-  https://raw.githubusercontent.com/elayadesign/ai-design-skills/main/skills/<skill-name>/SKILL.md
+  https://raw.githubusercontent.com/jamesrwatsonx-creator/ai-design-skills-codex/main/skills/<skill-name>/SKILL.md
 ```
 
 Or paste the file into **Settings → Rules for AI**.
@@ -49,7 +49,15 @@ Or paste the file into **Settings → Rules for AI**.
 <details>
 <summary><b>Codex / Windsurf / other</b></summary>
 
-For Codex, install any folder from this collection as a native skill under `~/.codex/skills/<skill-name>/SKILL.md`. Example for the inspiration catalog:
+For Codex, skills live under `${CODEX_HOME:-$HOME/.codex}/skills/<skill-name>/SKILL.md`. To install **all three skills** from this repository, run:
+
+```bash
+git clone https://github.com/jamesrwatsonx-creator/ai-design-skills-codex.git
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
+cp -R ai-design-skills-codex/skills/. "${CODEX_HOME:-$HOME/.codex}/skills/"
+```
+
+Or install **only the inspiration catalog**:
 
 ```bash
 mkdir -p "$HOME/.codex/skills/design-inspiration"
