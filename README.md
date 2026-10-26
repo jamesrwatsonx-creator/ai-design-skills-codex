@@ -12,6 +12,7 @@ Each skill is a self-contained folder. Install the ones you need.
 |---|---|
 | [`landing-page-design`](./skills/landing-page-design/SKILL.md) | Builds a landing page from scratch — intake questions, page structure, conversion copy, plus a full visual system (type, spacing, radius, motion) |
 | [`design-to-motion`](./skills/design-to-motion/SKILL.md) | Turns a static design into a pixel exact animated showcase — empty state to loaded, every visual acting out its story on a loop, background kept untouched, exported as an MP4 for X plus website and 800×500 GIFs |
+| [`design-inspiration`](./skills/design-inspiration/SKILL.md) | Curated references and a repeatable workflow for original web, mobile, CTA, portfolio, and motion design |
 
 More on the way. [Upgrading an existing site instead of building new?](https://github.com/elayadesign/redesign-skill) That one lives in its own repo since it predates this collection.
 
@@ -48,11 +49,19 @@ Or paste the file into **Settings → Rules for AI**.
 <details>
 <summary><b>Codex / Windsurf / other</b></summary>
 
-Copy the skill's `SKILL.md` into whatever your tool uses for project rules:
+For Codex, install any folder from this collection as a native skill under `~/.codex/skills/<skill-name>/SKILL.md`. Example for the inspiration catalog:
+
+```bash
+mkdir -p "$HOME/.codex/skills/design-inspiration"
+curl -fL "https://raw.githubusercontent.com/jamesrwatsonx-creator/ai-design-skills-codex/main/skills/design-inspiration/SKILL.md" \
+  -o "$HOME/.codex/skills/design-inspiration/SKILL.md"
+```
+
+For other tools, copy the skill's `SKILL.md` into the relevant project rules file:
 
 | Tool | Path |
 |---|---|
-| Codex | `AGENTS.md` |
+| Codex (legacy project rules) | `AGENTS.md` |
 | Windsurf | `.windsurfrules` |
 | Cline | `.clinerules` |
 | Generic | paste into your system prompt |
